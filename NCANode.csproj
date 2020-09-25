@@ -13,6 +13,7 @@
         <RepositoryType>git</RepositoryType>
         <PackageIcon>ncalayer.png</PackageIcon>
         <PackageIconUrl />
+        <RepositoryUrl>https://github.com/ZhekaCher/NCANode.git</RepositoryUrl>
         <Product>NCANode</Product>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
         <ApplicationIcon>ncalayer.ico</ApplicationIcon>
