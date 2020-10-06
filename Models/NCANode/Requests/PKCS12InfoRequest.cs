@@ -11,17 +11,32 @@ namespace NCANode.Models.NCANode.Requests
     /// <summary>
     /// Request for getting PKCS12 info
     /// </summary>
-    public class PKCS12InfoRequest
+    public class PKCS12InfoRequest : NCANodeRequest
     {
-        public string version { get; set; } = "1.0";
-        public string method { get; set; } = "PKCS12.info";
+        public PKCS12InfoRequest() : base("1.0", "PKCS12.info") {}
+
         public PKCS12InfoRequestParams @params { get; set; }
 
         public class PKCS12InfoRequestParams
         {
+            /// <summary>
+            /// Encoded file with p12 key, in Base64 format
+            /// </summary>
             public string p12 { get; set; }
+            
+            /// <summary>
+            /// Key password
+            /// </summary>
             public string password { get; set; }
+            
+            /// <summary>
+            /// (optional) Conduct revocation checks via OCSP
+            /// </summary>
             public bool verifyOcsp { get; set; } = false;
+            
+            /// <summary>
+            /// (optional) Perform revocation check via CRL
+            /// </summary>
             public bool verifyCrl { get; set; } = false;
         }
     }

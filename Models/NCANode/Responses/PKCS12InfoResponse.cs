@@ -8,18 +8,23 @@
 
 using System;
 
+
 namespace NCANode.Models.NCANode.Responses
 {
     /// <summary>
     /// Response with PKCS12 info
     /// </summary>
-    public class PKCS12InfoResponse
+    public class PKCS12InfoResponse : NCANodeResponse
     {
+        /// <summary>
+        /// PKCS12InfoResponseResult object
+        /// </summary>
         public PKCS12InfoResponseResult result { get; set; }
-        public string message { get; set; }
-        public int status { get; set; }
 
-
+        /// <summary>
+        /// PKCS12.info response
+        /// </summary>
+        /// todo(Add comments)
         public class PKCS12InfoResponseResult
         {
             public bool valid { get; set; }
