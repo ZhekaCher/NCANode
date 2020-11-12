@@ -13,7 +13,7 @@ namespace NCANode
     /// <summary>
     /// Class that allows to interact with NCANode API
     /// </summary>
-    public class NCANode
+    public class NcaNode
     {
         private readonly RestClient _client;
 
@@ -22,7 +22,7 @@ namespace NCANode
         /// </summary>
         /// <param name="host">API host</param>
         /// <param name="port">API port</param>
-        public NCANode(string host, int port)
+        public NcaNode(string host, int port)
         {
             _client = new RestClient($"http://{host}:{port}/");
         }

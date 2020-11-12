@@ -55,8 +55,11 @@ namespace NCANode.Models.NCANode.Responses
                 public string dn { get; set; }
                 public string state { get; set; }
                 public string birthDate { get; set; }
+                public string organization { get; set; }
                 public string iin { get; set; }
-                public long Iin => long.Parse(iin);
+                public long Iin => long.Parse(iin ?? "0");
+                public string bin { get; set; }
+                public long Bin => long.Parse(bin ?? "0");
             }
 
             public class PKCS12InfoResponseIssuer

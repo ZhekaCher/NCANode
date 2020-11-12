@@ -6,7 +6,7 @@
 
 ## Libraries
 
-* RestSharp 106.11.5
+* RestSharp 106.11.7
 
 ## Authors
 
